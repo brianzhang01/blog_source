@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Polynomial Regression</title>
+      <link>/2017/11/polynomial-regression/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/polynomial-regression/</guid>
+      <description>Introduction: side courses As a PhD student in the UK system, I was expecting a lot less coursework, with my first year diving straight into research. However, there are still a lot of gaps in my knowledge, so I hope to always be on the lookout for learning opportunities, including side classes.
+At the moment, I’m hoping to follow along with these three courses and do some assignments from time to time:</description>
+    </item>
     
     <item>
       <title>Blogging Aims</title>
@@ -19,17 +29,6 @@
       <guid>/2017/11/blogging-aims/</guid>
       <description>Hi there, and thanks for stopping by! In this post, I briefly introduce my current ideas for this blog and say a bit about myself.
 As of September, I&amp;rsquo;ve been a first-year PhD student at Oxford&amp;rsquo;s Statistics department. I received my bachelor&amp;rsquo;s in Physics from Harvard in 2015, and after working for two years am excited to be back in an academic setting. Part of this transition means more freedom and a lot more self-structured learning time.</description>
-    </item>
-    
-    <item>
-      <title>Priors</title>
-      <link>/2017/11/priors/</link>
-      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/11/priors/</guid>
-      <description>Transform functions In the orthonormal case, we are interested in how to get the revised estimate $w_{new}$ from the ordinary least squares solution \(w_{ols}\), once we place a prior. We would like to analyze this for four priors: Gaussian (L2), Laplace (L1), spike-and-slab, and mixture of Gaussians.
-First we define some functions:
-library(ggplot2) library(pryr) center_title &amp;lt;- theme(plot.title = element_text(hjust = 0.5)) plot_transforms &amp;lt;- function(x, priors, groups) { w_ols &amp;lt;- x w_new &amp;lt;- x df &amp;lt;- data.</description>
     </item>
     
     <item>
