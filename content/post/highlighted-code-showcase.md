@@ -685,6 +685,32 @@ class SomeClass:
 ... prompt'''
 {{< /codeblock >}}
 
+# R
+
+{{< codeblock "thing.R" "r" "http://underscorejs.org/#compact" "thing.R" >}}
+x_matrix = NULL
+y_matrix = as.matrix(y)
+x_curve = seq(-2.5, 3, 0.05)
+y_data = NULL
+for(i in 1:10) {
+  x_matrix = cbind(x_matrix, x^(i-1))
+  beta = solve(t(x_matrix) %*% x_matrix) %*% t(x_matrix) %*% y_matrix
+  y_curve = rep(0, length(x_curve))
+  for(j in 1:i) {
+    y_curve = y_curve + beta[j]*x_curve^(j-1)
+  }
+  y_data = rbind(y_data, data.frame(x=x_curve, y=y_curve, d=(i-1)))
+}
+
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+{{< /codeblock >}}
+
 # Ruby
 
 {{< codeblock "archives.rb" "ruby" "http://underscorejs.org/#compact" "archives.rb" >}}

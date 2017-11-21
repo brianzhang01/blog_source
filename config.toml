@@ -15,7 +15,8 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Hugo tranquilpeak theme"
+# title = "Hugo tranquilpeak theme"
+title = "Home | Brian Zhang"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
@@ -111,7 +112,13 @@ canonifyurls = true
 
   # Syntax highlighter, possible choice between: "highligth.js" (recommanded) and "prism.js" (experimental)
   # You can comment it to disable syntax highligthing
-  syntaxHighlighter = "highligth.js"
+  # syntaxHighlighter = "highligth.js"
+  # syntaxHighlighter = "prism.js"
+
+  # added by brianzhang01
+  highlightjsVersion = "9.9.0"
+  highlightjsLang = ["r", "yaml", "python"]
+  highlightjsTheme = "github"
 
   # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
   clearReading = true
