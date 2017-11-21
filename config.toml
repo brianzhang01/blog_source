@@ -170,10 +170,6 @@ canonifyurls = true
   #     icon: search
   #     class: st-search-show-outputs
 
-  # Added to test out, brianzhang01, 11/2/17
-  # MathJaxCDN = "//cdn.bootcss.com"
-  # MathJaxVersion = "2.7.1"
-
   # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
   # they have to be referred from static root. Example
   # [[params.customCSS]]
