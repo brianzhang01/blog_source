@@ -6,9 +6,7 @@ coverImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
 metaAlignment: center
 coverMeta: out
 date: 2015-05-13
-categories:
-- tranquilpeak
-- features
+categories: []
 tags:
 - cover image
 ---

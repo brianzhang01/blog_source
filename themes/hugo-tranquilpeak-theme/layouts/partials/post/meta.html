@@ -5,6 +5,10 @@
         {{ partial "internal/date.html" . }}
       </time>
     {{ end }}
-    {{ partial "post/category.html" . }}
+    {{ if not (eq .Params.showReadingTime false) }}
+      <span class="middotDivider">&middot;</span>
+      <span class="readingTime">{{ .ReadingTime }} min read</span>
+    {{ end }}
+    <!-- {{ partial "post/category.html" . }} -->
   </div>
 {{ end }}

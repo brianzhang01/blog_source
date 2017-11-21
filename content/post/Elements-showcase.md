@@ -1,9 +1,7 @@
 ---
 title: "Elements showcase"
 date: 2015-05-28
-categories:
-- tranquilpeak
-- features
+categories: []
 tags:
 - html elements
 - markdown
