@@ -6,6 +6,9 @@
       </a>
     </h1>
   {{ else }}
+    {{ if eq .Section "post" }}
+      <span class="article-duration">{{ .ReadingTime }} min read</span>
+    {{ end }}
     <h1 class="post-title" itemprop="headline">
       {{ $.Title }}
     </h1>
