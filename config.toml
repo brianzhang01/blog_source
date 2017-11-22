@@ -33,7 +33,7 @@ canonifyurls = true
 
 [author]
   name = "Brian Zhang"
-  bio = "Academic statistics blog"
+  bio = "Blog built using [Hugo](https://gohugo.io/) and [blogdown](https://github.com/rstudio/blogdown). Theme is [kakawait's port](https://github.com/kakawait/hugo-tranquilpeak-theme) of the [Tranquilpeak theme](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak), originally by [Louis Barranqueiro](https://github.com/LouisBarranqueiro). Cover image © Flickr, [Creative Commons Attribution License](https://creativecommons.org/licenses/by-nc/2.0/#), user [alexwhite](https://www.flickr.com/photos/alexwhite/4509083932)."
   job = "Statistics PhD Student"
   location = "University of Oxford"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
@@ -80,18 +80,25 @@ canonifyurls = true
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
   url = "/#about"
 
-# [[menu.links]]
-#   weight = 1
-#   identifier = "github"
-#   name = "GitHub"
-#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-#   url = "https://github.com/brianzhang01"
+[[menu.links]]
+  weight = 1
+  identifier = "github"
+  name = "GitHub"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
+  url = "https://github.com/brianzhang01/brianzhang01.github.io"
 # [[menu.links]]
 #   weight = 2
 #   identifier = "stackoverflow"
 #   name = "Stack Overflow"
 #   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
 #   url = "https://stackoverflow.com/users/636472/kakawait"
+
+[[menu.links]]
+  weight = 2
+  identifier = "rss"
+  name = "RSS"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+  url = "/index.xml"
 
 # [[menu.misc]]
 #   weight = 1
@@ -127,7 +134,8 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  # description = "Hugo tranquilpeak theme demo"
+  description = "Statistics blog"
 
   # Customization
   # Define the behavior of the sidebar
@@ -150,7 +158,8 @@ canonifyurls = true
   # Current image is on AWS S3 and delivered by AWS CloudFront.
   # Otherwise put your image in folder `static/_images/` (development)  or in `source/assets/images/` if you can't or don't want to build the theme,
   # and use relative url : `your-image.png`
-  coverImage = "cover.jpg"
+  # coverImage = "cover.jpg"
+  coverImage = "radcam.jpg"
 
   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
   imageGallery = true
