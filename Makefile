@@ -2,6 +2,7 @@
 # https://github.com/kbroman/blog/blob/source/Makefile
 
 DATA_DIR=content/data/
+GITHUB_GIANT_DIR=https://github.com/brianzhang01/giant_demo/raw/master/static/
 
 all: build
 
@@ -17,15 +18,27 @@ build_nocache: data
 	R -e "blogdown::build_site()"
 
 serve: data
-	R -e "blogdown::serve_site(port=4004)"
+	R -e "blogdown::serve_site(port=8000)"
 
-data: $(DATA_DIR)points_hw4.txt
+data: $(DATA_DIR)points_hw4.txt $(DATA_DIR)giant_summary_n100.png
 
 $(DATA_DIR)points_hw4.txt:
 	cd $(DATA_DIR); wget https://www.cs.princeton.edu/~bee/courses/hw/points_hw4.txt
 
+$(DATA_DIR)giant_summary_n100.png:
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n100.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n100_small.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n100_big.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n10000.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n10000_small.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n10000_big.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n1000000.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n1000000_small.png
+	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n1000000_big.png
+
 clean:
 	rm content/data/*
 	rm content/post/*.html
+	rm -rf public/data
 	rm -rf static/post/*
 	rm -rf blogdown/post/*

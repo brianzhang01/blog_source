@@ -1,0 +1,71 @@
+---
+title: Random Graphs and Giant Components
+author: Brian Zhang
+date: '2018-06-04'
+slug: random-graphs-and-giant-components
+categories: []
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+## What we are trying to do
+
+```{r graph-functions, warning=FALSE, message=FALSE}
+library(igraph)
+
+make_graph = function(n, p, seed=1) {
+  set.seed(seed)
+  probs = runif(n*(n-1)/2)
+  k = 1
+  edges = NULL
+  for (i in 1:(n-1)) {
+    for (j in (i+1):n) {
+      if (probs[k] < p) {
+        edges = c(edges, c(i, j))
+      }
+      k = k + 1
+    }
+  }
+  return(graph(edges=edges, n=n, directed=F))
+}
+
+plot_graph_circle = function(g, main="", vsize=5) {
+  comp = components(g)
+  max_comp = (comp$membership == which.max(comp$csize))
+  special = ifelse(max_comp, "orange", "blue")
+  plot(g, layout=layout_in_circle, vertex.size=vsize, vertex.label=NA,
+       vertex.color=special, main=main)
+}
+```
+
+```{r graph-viz, fig.show="animate"}
+n = 50
+mean_degree = c(seq(0, 4, 0.25))
+for (d in mean_degree) {
+  p = d / (n-1)
+  g = make_graph(n, p)
+  max_comp_size = max(components(g)$csize)
+  plot_graph_circle(g, main=paste0("p*(n-1)=", d, ", max_component=", max_comp_size))
+}
+```
+
+## Results for moderate n
+<img src="/data/giant_summary_n50.png" height="500" />
+
+<img src="/data/giant_summary_n100.png" height="500" />
+
+<img src="/data/giant_summary_n1000.png" height="500" />
+
+## Results for n = 10,000
+<img src="/data/giant_summary_n10000.png" height="500" /> <img src="/data/giant_summary_n10000_small.png" height="500" /> <img src="/data/giant_summary_n10000_big.png" height="500" />
+
+## Results for n = 1,000,000
+<img src="/data/giant_summary_n1000000.png" height="500" /> <img src="/data/giant_summary_n1000000_small.png" height="500" /> <img src="/data/giant_summary_n1000000_big.png" height="500" />
+
+
+Some text
