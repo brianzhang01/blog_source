@@ -20,12 +20,12 @@ build_nocache: data
 serve: data
 	R -e "blogdown::serve_site(port=8000)"
 
-data: $(DATA_DIR)points_hw4.txt $(DATA_DIR)giant_summary_n100.png
+data: $(DATA_DIR)points_hw4.txt $(DATA_DIR)giant_summary_n50.png
 
 $(DATA_DIR)points_hw4.txt:
 	cd $(DATA_DIR); wget https://www.cs.princeton.edu/~bee/courses/hw/points_hw4.txt
 
-$(DATA_DIR)giant_summary_n100.png:
+$(DATA_DIR)giant_summary_n50.png:
 	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n50.png
 	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n500.png
 	cd $(DATA_DIR); wget $(GITHUB_GIANT_DIR)giant_summary_n10000.png

@@ -9,14 +9,19 @@ tags: []
 
 
 
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
 <p>This post will introduce some of the ideas behind random graphs, a very exciting area of current probability research. As has been a theme in my posts so far, I try to emphasize a reproducible, computational example. In this case, we’ll be looking at the “giant component” and how that arises in random graphs.</p>
-<p>There’s a lot more than this example that I would like to talk about, so I’ve deferred a longer discussion on random graphs to the end of this post, with a lot of references for the interested reader.</p>
+<p>There’s a lot more than this example that I find exciting, so I’ve deferred a longer discussion on random graphs to the end of this post, with a lot of references for the interested reader.</p>
 <p>In addition to code that sits inside the R markdown file for this post, I also wrote some C++ code to generate the more time-intensive examples. That repository is accessible on GitHub <a href="https://github.com/brianzhang01/giant_demo">here</a>.</p>
+<div id="introduction-random-graphs" class="section level2">
+<h2>Introduction: random graphs</h2>
+<p>Someone recently asked me at a pub what it takes to get a probability distribution named after you. Are new distributions still being discovered today?</p>
+<p>I answered that we usually think of probability distributions as over the one-dimensional real line, for which most distributions have been with us for perhaps a century.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> However, one can study the probability distributions of all sorts of abstract objects – from a deck of cards to randomly broken sticks – and many of these areas remain ripe for discovery.</p>
+<p>The field of random graphs is one such area. Recall from college-level math or computer science that an undirected graph is a collection of <em>vertices</em> (also called nodes), with some pairs of vertices connected by <em>edges</em>. Originally, those working in graph theory focused on proving many deterministic properties of graphs. For instance, let the <em>degree</em> of a vertex be the number of other vertices it is connected to. Then the <a href="https://en.wikipedia.org/wiki/Handshaking_lemma">handshake lemma</a> says that the sum of all the degrees is always an even number (proof omitted here).</p>
+<p>By contrast, the field of random graphs is interested in probabilistic properties of graphs given a random process for generating them. Here’s the simplest type of random graph that is studied. Fix a positive integer <span class="math">\(N\)</span> and a probability <span class="math">\(p\)</span> between 0 and 1. Given <span class="math">\(N\)</span> vertices, there are <span class="math">\(\binom{N}{2}\)</span> possible edges between them, so choose to connect each edge with independent probability <span class="math">\(p\)</span> (e.g. by flipping a biased coin <span class="math">\(\binom{N}{2}\)</span> times). Voila! You have generated a random graph. As long as <span class="math">\(p\)</span> is not 0 or 1, this process can generate any undirected graph on <span class="math">\(N\)</span> vertices. However, some configurations will be more probable while others are less probable. This probability distribution over undirected graphs, or equivalently the generative process described, are called the Erdos-Renyi random graph with parameters <span class="math">\(N\)</span> and <span class="math">\(p\)</span>.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>Since each edge is sampled independently, we can derive a result on the total number of edges in the graph: it follows a <span class="math">\(\mbox{Binomial}(\binom{N}{2}, p)\)</span> distribution. Similarly, if we consider a single vertex, there are <span class="math">\(N - 1\)</span> possible edges that involve that vertex. Since each is sampled independently, the degree of each vertex follows a <span class="math">\(\mbox{Binomial}{N-1, p}\)</span> distribution. The expression <span class="math">\((N-1)p\)</span> will thus be the mean degree of a vertex.</p>
 </div>
-<div id="the-theory" class="section level2">
-<h2>The theory</h2>
+<div id="they-might-be-giants" class="section level2">
+<h2>They Might Be Giants</h2>
 </div>
 <div id="an-animation" class="section level2">
 <h2>An animation</h2>
@@ -48,13 +53,20 @@ plot_graph = function(g, main=&quot;&quot;, layout=layout_in_circle, vsize=5) {
 <p>For n = 50:</p>
 <pre class="r"><code>n = 50
 mean_degree = c(seq(0, 4, 0.25))
-for (d in mean_degree) {
+max_size = NULL
+for (i in 1:length(mean_degree)) {
+  d = mean_degree[i]
   p = d / (n-1)
   g = make_graph(n, p)
-  max_comp_size = max(components(g)$csize)
+  max_size[i] = max(components(g)$csize)
+  
+  layout(matrix(c(1, 2), 1), c(4, 3))
   plot_graph(
     g, layout=layout_in_circle,
-    main=paste0(&quot;p*(n-1)=&quot;, sprintf(&quot;%.2f&quot;, d), &quot;, max_component=&quot;, max_comp_size))
+    main=paste0(&quot;p*(n-1)=&quot;, sprintf(&quot;%.2f&quot;, d), &quot;, max_size=&quot;, max_size[i]))
+  plot(c(0, max(mean_degree)), c(0, n), type=&quot;n&quot;,
+       main=&quot;Summary&quot;, xlab=&quot;mean_degree&quot;, ylab=&quot;max_size&quot;)
+  lines(mean_degree[1:i], max_size, type=&quot;o&quot;, pch=19)
 }</code></pre>
 <video width="672"  controls loop>
 <source src="/post/2018-06-04-random-graphs-and-giant-components_files/figure-html/graph-viz-50.webm" />
@@ -63,13 +75,20 @@ for (d in mean_degree) {
 <p>For n = 500:</p>
 <pre class="r"><code>n = 500
 mean_degree = c(seq(0, 6, 0.25))
-for (d in mean_degree) {
+max_size = NULL
+for (i in 1:length(mean_degree)) {
+  d = mean_degree[i]
   p = d / (n-1)
   g = make_graph(n, p)
-  max_comp_size = max(components(g)$csize)
+  max_size[i] = max(components(g)$csize)
+  
+  layout(matrix(c(1, 2), 1), c(4, 3))
   plot_graph(
     g, layout=layout_on_sphere,
-    main=paste0(&quot;p*(n-1)=&quot;, sprintf(&quot;%.2f&quot;, d), &quot;, max_component=&quot;, max_comp_size))
+    main=paste0(&quot;p*(n-1)=&quot;, sprintf(&quot;%.2f&quot;, d), &quot;, max_size=&quot;, max_size[i]))
+  plot(c(0, max(mean_degree)), c(0, n), type=&quot;n&quot;,
+       main=&quot;Summary&quot;, xlab=&quot;mean_degree&quot;, ylab=&quot;max_size&quot;)
+  lines(mean_degree[1:i], max_size, type=&quot;o&quot;, pch=19)
 }</code></pre>
 <video width="672"  controls loop>
 <source src="/post/2018-06-04-random-graphs-and-giant-components_files/figure-html/graph-viz-500.webm" />
@@ -83,6 +102,9 @@ for (d in mean_degree) {
 <p><img src="/data/giant_summary_n50.png" height="500" /></p>
 <p><img src="/data/giant_summary_n500.png" height="500" /></p>
 </div>
+<div id="theory-part-two" class="section level2">
+<h2>Theory, Part Two</h2>
+</div>
 <div id="results-for-n-10000" class="section level2">
 <h2>Results for n = 10,000</h2>
 <p><img src="/data/giant_summary_n10000.png" height="500" /> <img src="/data/giant_summary_n10000_small.png" height="500" /> <img src="/data/giant_summary_n10000_big.png" height="500" /></p>
@@ -90,5 +112,21 @@ for (d in mean_degree) {
 <div id="results-for-n-1000000" class="section level2">
 <h2>Results for n = 1,000,000</h2>
 <p><img src="/data/giant_summary_n1000000.png" height="500" /> <img src="/data/giant_summary_n1000000_small.png" height="500" /> <img src="/data/giant_summary_n1000000_big.png" height="500" /></p>
-<p>Some text</p>
+</div>
+<div id="conclusion-and-bibliography" class="section level2">
+<h2>Conclusion and Bibliography</h2>
+<p>That concludes my example of analyzing the largest component size in Erdos-Renyi random graphs. However, as I mentioned at the start of this post, this only scratches the surface, and there’s a lot more to dig into in terms of the mathematical details, history, and current work in this area. Here’s my attempt at a survey of what else is out there.</p>
+<p><strong>Books.</strong></p>
+<p><strong>Proofs and stuff.</strong> Erdos, Renyi, Gilbert. Chronology and naming</p>
+<p><strong>Beyond the Erdos-Renyi model.</strong> Other models like Barabasi-Albert (originally discovered by Price in 1965), general idea of scale-free networks. I am thankful to Juho Lee at Oxford for introducing me to paper on inhomogeneous random graphs.</p>
+<p><strong>Other critical behavior.</strong> Physics analogs. Work by Skerman and McDiarmid that first introduced me to this area.</p>
+<p><strong>Software and network visualization.</strong></p>
+<p><strong>Acknowledgments.</strong> As mentioned earlier, I was first exposed to the surprising critical behavior of random graphs by a lecture by Fiona Skerman in November 2017. In preparing this post, the <code>igraph</code> package and Ognyanova’s tutorial proved very helpful. Finally, Juho Lee, Ryan Lee, and Ruth Fong provided some useful ideas which influenced my final presentation.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>See for instance, my previous post. There exist some interesting counterexamples, like the <a href="https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution">Marchenko-Pastur</a> (1960s) and <a href="https://en.wikipedia.org/wiki/Tracy%E2%80%93Widom_distribution">Tracy-Widom</a> (1990s) distributions.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>For a more nuanced discussion of the naming of this model, see the last section of this post.<a href="#fnref2">↩</a></p></li>
+</ol>
 </div>
