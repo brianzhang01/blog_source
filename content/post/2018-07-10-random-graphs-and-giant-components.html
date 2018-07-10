@@ -1,7 +1,7 @@
 ---
 title: Random Graphs and Giant Components
 author: Brian Zhang
-date: '2018-06-04'
+date: '2018-07-10'
 slug: random-graphs-and-giant-components
 categories: []
 tags: []
@@ -17,7 +17,7 @@ tags: []
 <p>Someone recently asked me at a pub what it takes to get a probability distribution named after you. Are new distributions still being discovered today?</p>
 <p>I answered that we usually think of probability distributions as over the one-dimensional real line, for which most distributions have been with us for perhaps a century.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> However, one can study the probability distributions of all sorts of abstract objects – from a deck of cards to randomly broken sticks – and many of these areas remain ripe for discovery.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
 <p>The field of random graphs is one such area. Recall from college-level math or computer science that an undirected graph is a collection of <em>vertices</em> (also called nodes), with some pairs of vertices connected by <em>edges</em>. (A depiction of an example graph is below.) Originally, those working in graph theory focused on proving many deterministic properties of graphs. For instance, let the <em>degree</em> of a vertex be the number of other vertices it is connected to. Then the <a href="https://en.wikipedia.org/wiki/Handshaking_lemma">handshake lemma</a> says that the sum of all the degrees is always an even number (proof omitted here).</p>
-<p><img src="/post/2018-06-04-random-graphs-and-giant-components_files/figure-html/graph-example-1.png" width="672" /></p>
+<p><img src="/post/2018-07-10-random-graphs-and-giant-components_files/figure-html/graph-example-1.png" width="672" /></p>
 <p>By contrast, the field of random graphs is interested in probabilistic properties of graphs given a random process for generating them. Here’s the simplest type of random graph that is studied. Fix a positive integer <span class="math">\(n\)</span> and a probability <span class="math">\(p\)</span> between 0 and 1. Given <span class="math">\(n\)</span> vertices, there are <span class="math">\(\binom{n}{2}\)</span> possible edges between them, so choose to connect each edge with independent probability <span class="math">\(p\)</span> (e.g. by flipping a biased coin <span class="math">\(\binom{n}{2}\)</span> times). Voilà! You have generated a random graph. As long as <span class="math">\(p\)</span> is not 0 or 1, this process can generate any undirected graph on <span class="math">\(n\)</span> vertices. However, some configurations will be more probable while others are less probable. This probability distribution over undirected graphs, or equivalently the generative process described, are called the Erdős-Rényi random graph with parameters <span class="math">\(n\)</span> and <span class="math">\(p\)</span>.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
 <p>Since each edge is sampled independently, we can derive a result on the total number of edges in the graph: it follows a <span class="math">\(\mbox{Binomial}(\binom{n}{2}, p)\)</span> distribution. Similarly, if we consider a single vertex, there are <span class="math">\(n - 1\)</span> possible edges that involve that vertex. Since each is sampled independently, the degree of each vertex follows a <span class="math">\(\mbox{Binomial}(n-1, p)\)</span> distribution. The expression <span class="math">\((n-1)p\)</span> will thus be the mean degree of a vertex.</p>
 </div>
@@ -77,7 +77,7 @@ for (i in 1:length(mean_degree)) {
   lines(mean_degree[1:i], max_size, type=&quot;o&quot;, pch=19)
 }</code></pre>
 <video width="672"  controls loop>
-<source src="/post/2018-06-04-random-graphs-and-giant-components_files/figure-html/graph-viz-50.webm" />
+<source src="/post/2018-07-10-random-graphs-and-giant-components_files/figure-html/graph-viz-50.webm" />
 </video>
 
 <p>In this case, the largest component size (marked out by orange in the visualization) shows a large jump when <span class="math">\(p(n-1)\)</span> goes from <span class="math">\(1.25\)</span> to <span class="math">\(1.50\)</span>. By the value <span class="math">\(3.25\)</span>, all vertices are part of one component.</p>
@@ -100,7 +100,7 @@ for (i in 1:length(mean_degree)) {
   lines(mean_degree[1:i], max_size, type=&quot;o&quot;, pch=19)
 }</code></pre>
 <video width="672"  controls loop>
-<source src="/post/2018-06-04-random-graphs-and-giant-components_files/figure-html/graph-viz-500.webm" />
+<source src="/post/2018-07-10-random-graphs-and-giant-components_files/figure-html/graph-viz-500.webm" />
 </video>
 
 <p>In this case, the largest component looks relatively small when <span class="math">\(p(n-1) &lt; 0.75\)</span>, and increases quickly in the range from <span class="math">\(1\)</span> to <span class="math">\(3\)</span>.</p>
@@ -116,8 +116,8 @@ for (i in 1:length(mean_degree)) {
 <p><img src="/data/giant_summary_n10000_small.png" height="500" /></p>
 <p>We can also zoom in on the region leading up to <span class="math">\(p(n-1) \approx \ln(n)\)</span>, which in the case of <span class="math">\(n = 10,000\)</span> is about <span class="math">\(9.2\)</span>.</p>
 <p><img src="/data/giant_summary_n10000_big.png" height="500" /></p>
-<p>Note how all the observations collapse into <span class="math">\(5\)</span>, then <span class="math">\(4\)</span>, then <span class="math">\(3\)</span> dots. This suggests that at the very right of the plot, the giant component sizes are all between <span class="math">\(n = 99,998\)</span>, <span class="math">\(99,999\)</span>, or <span class="math">\(100,000\)</span>. In fact, Erdős and Rényi also proved a second result saying that when <span class="math">\(p(n-1) &gt; \ln(n)\)</span>, the entire graph becomes “almost entirely connected” almost surely.<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a></p>
-<p>Lastly, we can visualize <span class="math">\(n = 1,000,000\)</span>, for which my simulations took a few hours:</p>
+<p>Note how all the observations collapse into <span class="math">\(5\)</span>, then <span class="math">\(4\)</span>, then <span class="math">\(3\)</span> dots. This suggests that at the very right of the plot, the giant component sizes are all either <span class="math">\(99,998\)</span>, <span class="math">\(99,999\)</span>, or <span class="math">\(100,000\)</span>. In fact, Erdős and Rényi also proved a second result saying that when <span class="math">\(p(n-1) &gt; \ln(n)\)</span>, the entire graph becomes “almost entirely connected” almost surely.<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a></p>
+<p>Lastly, we can visualize <span class="math">\(n = 1,000,000\)</span>, for which my simulations took several hours, mainly due to simulating <span class="math">\(O(n^2)\)</span> uniform numbers for the edges:</p>
 <p><img src="/data/giant_summary_n1000000.png" height="500" /></p>
 <p>Wow! Cool right?</p>
 <p><img src="/data/giant_summary_n1000000_small.png" height="500" /></p>
@@ -142,6 +142,7 @@ for (i in 1:length(mean_degree)) {
 <p>I also found <a href="http://kateto.net/2016/05/network-datasets/">this post</a> by Ognyanova interesting, on some actual network datasets. It could be a good place to start with real network analysis!</p>
 <p>On the web, my favorite visualization that I found illustrating the giant component is <a href="https://cs4423.github.io/notes/2018/02/15/note10.html">this one</a>, done by <a href="http://schmidt.ucg.ie/~goetz/">Professor Götz Pfeiffer</a> for CS4423 at the National University of Ireland, Galway. It’s a beautiful <a href="https://d3js.org/">D3.js</a> animation, and the code can be found online <a href="https://github.com/cs4423/cs4423.github.io/blob/master/js/random.js">here</a>.</p>
 <p><strong>Acknowledgments.</strong> As mentioned earlier, I was first exposed to the surprising critical behavior of random graphs during a lecture by Fiona Skerman in November 2017. In preparing this post, the <code>igraph</code> package and Ognyanova’s tutorial proved very helpful. I am thankful to Juho Lee for introducing me to the paper on inhomogeneous random graphs. Finally, Ryan Lee and Ruth Fong provided useful feedback which influenced my final presentation.</p>
+<p><strong><em>This blog post was generated from an R Markdown file using the <code>knitr</code> and <code>blogdown</code> packages. The original source can be downloaded <a href="https://github.com/brianzhang01/brianzhang01.github.io/blob/master/post/2018-07-10-random-graphs-and-giant-components.Rmd">from GitHub</a>.</em></strong></p>
 </div>
 <div class="footnotes">
 <hr />

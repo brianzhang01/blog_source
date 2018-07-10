@@ -1,7 +1,7 @@
 ---
 title: Random Graphs and Giant Components
 author: Brian Zhang
-date: '2018-06-04'
+date: '2018-07-10'
 slug: random-graphs-and-giant-components
 categories: []
 tags: []
@@ -156,9 +156,9 @@ We can also zoom in on the region leading up to $p(n-1) \approx \ln(n)$, which i
 
 <img src="/data/giant_summary_n10000_big.png" height="500" />
 
-Note how all the observations collapse into $5$, then $4$, then $3$ dots. This suggests that at the very right of the plot, the giant component sizes are all between $n = 99,998$, $99,999$, or $100,000$. In fact, Erdős and Rényi also proved a second result saying that when $p(n-1) > \ln(n)$, the entire graph becomes "almost entirely connected" almost surely.^[Quoting [Barabási (2016) Section 3.6](http://networksciencebook.com/chapter/3#evolution-network), "In the absence of isolated nodes the network becomes connected."]
+Note how all the observations collapse into $5$, then $4$, then $3$ dots. This suggests that at the very right of the plot, the giant component sizes are all either $99,998$, $99,999$, or $100,000$. In fact, Erdős and Rényi also proved a second result saying that when $p(n-1) > \ln(n)$, the entire graph becomes "almost entirely connected" almost surely.^[Quoting [Barabási (2016) Section 3.6](http://networksciencebook.com/chapter/3#evolution-network), "In the absence of isolated nodes the network becomes connected."]
 
-Lastly, we can visualize $n = 1,000,000$, for which my simulations took a few hours:
+Lastly, we can visualize $n = 1,000,000$, for which my simulations took several hours, mainly due to simulating $O(n^2)$ uniform numbers for the edges:
 
 <img src="/data/giant_summary_n1000000.png" height="500" />
 
@@ -203,3 +203,5 @@ I also found [this post](http://kateto.net/2016/05/network-datasets/) by Ognyano
 On the web, my favorite visualization that I found illustrating the giant component is [this one](https://cs4423.github.io/notes/2018/02/15/note10.html), done by [Professor Götz Pfeiffer](http://schmidt.ucg.ie/~goetz/) for CS4423 at the National University of Ireland, Galway. It's a beautiful [D3.js](https://d3js.org/) animation, and the code can be found online [here](https://github.com/cs4423/cs4423.github.io/blob/master/js/random.js).
 
 **Acknowledgments.** As mentioned earlier, I was first exposed to the surprising critical behavior of random graphs during a lecture by Fiona Skerman in November 2017. In preparing this post, the `igraph` package and Ognyanova's tutorial proved very helpful. I am thankful to Juho Lee for introducing me to the paper on inhomogeneous random graphs. Finally, Ryan Lee and Ruth Fong provided useful feedback which influenced my final presentation.
+
+***This blog post was generated from an R Markdown file using the `knitr` and `blogdown` packages. The original source can be downloaded [from GitHub](https://github.com/brianzhang01/brianzhang01.github.io/blob/master/post/2018-07-10-random-graphs-and-giant-components.Rmd).***
