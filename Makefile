@@ -9,15 +9,18 @@ all: build
 # Build in two steps so we get the caching (from local=TRUE)
 # and the `baseurl`s (from local=FALSE)
 build: data
+	Rscript print_packages.R > packages.txt
 	R -e "blogdown::build_site(local=TRUE, run_hugo=FALSE)"
 	R -e "blogdown::hugo_build(local=FALSE)"
 
 # Builds without caching.
 # Alternatively, run `make clean` and then `make build`.
 build_nocache: data
+	Rscript print_packages.R > packages.txt
 	R -e "blogdown::build_site()"
 
 serve: data
+	Rscript print_packages.R > packages.txt
 	R -e "blogdown::serve_site(port=8000)"
 
 data: $(DATA_DIR)points_hw4.txt $(DATA_DIR)giant_summary_n50.png
