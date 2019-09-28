@@ -9,7 +9,7 @@ tags: []
 
 It's been two years since I started blogging, as well as two years since I started my PhD in the Oxford Statistics department. While it's been several months since my last post, I hope to get back into sharing some shorter posts and ideas going forward.
 
-To get myself writing again, I thought I'd broaden the scope of my posts beyond [statistics and machine learning](2017/11/blogging-aims/). In particular, over the past two years, I've found myself getting more interested in abstract math as well as software engineering. Compared to machine learning, which can be a pretty heuristic science (think about the process of writing tests for machine learning code), both math and computer science tend to be built on modular components, each with a precise, testable description. Learning about these principles has been a nice break from research.
+To get myself writing again, I thought I'd broaden the scope of my posts beyond [statistics and machine learning](/2017/11/blogging-aims/). In particular, over the past two years, I've found myself getting more interested in abstract math as well as software engineering. Compared to machine learning, which can be a pretty heuristic science (think about the process of writing tests for machine learning code), both math and computer science tend to be built on modular components, each with a precise, testable description. Learning about these principles has been a nice break from research.
 
 So here goes with a software engineering-related post!
 
