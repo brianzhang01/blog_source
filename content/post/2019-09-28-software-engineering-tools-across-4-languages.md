@@ -29,7 +29,7 @@ During my PhD, I've touched 4 popular programming languages, though I now focus 
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Packaging / build system | Release code and install packages | CMake | pip | CRAN / [R Packages](http://r-pkgs.had.co.nz/) | JAR files, [Ant / Maven / Gradle](https://www.baeldung.com/ant-maven-gradle) |
 | IDE | Visual environment and tools | Visual Studio / XCode / QtCreator | PyCharm | RStudio | IntelliJ |
-| Unit testing | Ensuring new changes don't break things | Catch2, googletest, Boost.Test | pytest, unittest, nose: [comparison](https://pythontesting.net/transcripts/2-pytest-vs-unittest-vs-nose/) | RStudio | JUnit, TestNG, Spock |
+| Unit testing | Ensuring new changes don't break things | Catch2, googletest, Boost.Test | pytest, unittest, nose: [comparison](https://pythontesting.net/transcripts/2-pytest-vs-unittest-vs-nose/) | testthat | JUnit, TestNG, Spock |
 | Code coverage tool | Track what lines get hit by unit tests | gcov / lcov | coverage.py, [examples](https://github.com/codecov/example-python) | covr | [IntelliJ](https://www.jetbrains.com/help/idea/viewing-code-coverage-results.html) |
 | Documentation generator | Explain code to end users and developers | doxygen | Sphinx | roxygen2 | javadoc |
 | Debugger | Step through code statement by statement, get stack trace information | gdb | pdb | [RStudio debugger](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio), [Hadley's recs](https://adv-r.hadley.nz/debugging.html) | IntelliJ (use [this](https://medium.com/@rosolko/сurbing-slow-intellij-idea-debugging-1e2b9d5d7eff)) |
