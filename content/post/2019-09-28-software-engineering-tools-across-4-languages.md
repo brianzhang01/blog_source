@@ -23,7 +23,7 @@ As the above quote illustrates, good tools improve the enjoyment and efficiency 
 
 As I've taken time to learn about some of these tools, I've discovered that there are a few universal tools that transcend a particular language or environment, like Git for source code control and Travis CI for continuous integration. For most tools, however, you'll make different choices depending on the programming language you're using. For instance, you would want to use a language-specific unit testing library; many IDEs are designed around a particular language; and while doxygen supports a variety of languages, it's primarily used as a documentation generator for C++.
 
-During my PhD, I've touched 4 popular programming languages, though I now focus exclusively on C++ and Python. Here's a table I compiled a month ago where I went through these 4 languages and tried to list the tools that were usually recommended for each.^[The table unfortunately does not yet scroll on mobile.]
+During my PhD, I've touched 4 popular programming languages, though I now focus exclusively on C++ and Python. Here's a table I compiled a month ago where I went through these 4 languages and tried to list the tools that were usually recommended for each.
 
 | Type of tool | Rationale | C++ | Python | R | Java |
 | :--- | :--- | :--- | :--- | :--- | :--- |
