@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://brianzhang01.github.io/"
 languageCode = "en-us"
-title = "Brian Zhang's blog"
+title = "Brian Zhang's writings"
 theme = "ezhil"
 
 # Enable syntax highlighting.
@@ -9,12 +9,17 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 # Your Google analytics code.
-googleAnalytics = "UA-123-45"
+# googleAnalytics = "UA-123-45"
+googleAnalytics = "UA-113303717-1"
 # Your Disqus sortname.
-disqusShortname = "localhost"
+# disqusShortname = "localhost"
+disqusShortname = "brianzhang01-stats"
 
 # Number of posts to show in recent posts list (Optional). Defaults to 10.
 paginate = 10
+
+[permalinks]
+  post = "/:year/:month/:slug/"
 
 [params]
     # Blog subtitle which appears below blog title. Supports markdown.
