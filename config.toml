@@ -1,6 +1,6 @@
 baseURL = "https://brianzhang01.github.io/"
 languageCode = "en-us"
-title = "Brian Zhang's writings"
+title = "Brian Zhang's blog"
 theme = "ezhil"
 
 # Enable syntax highlighting.
