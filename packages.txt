@@ -55,7 +55,7 @@
    GenomeInfoDb     1.2.4
          getopt    1.20.2
       gganimate     1.0.0
-        ggplot2     3.1.0
+        ggplot2     3.2.1
         ggrepel     0.8.1
           git2r    0.21.0
          glmnet    2.0-13
