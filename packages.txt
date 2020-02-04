@@ -1,7 +1,8 @@
-[1] "Today's date is 2019-10-25"
+[1] "Today's date is 2020-02-04"
         Package   Version
       animation       2.5
   AnnotationDbi    1.28.2
+            ape       5.3
      assertthat     0.2.0
       backports     1.1.2
       base64enc     0.1-3
