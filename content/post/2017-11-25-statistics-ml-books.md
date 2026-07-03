@@ -4,6 +4,7 @@ author: Brian Zhang
 date: '2017-11-25'
 slug: statistics-ml-books
 categories: []
+description: 'At the start of the last post, I talked briefly about courses I’ve been working through. Here are some follow-up thoughts on good books!'
 tags:
   - general
 ---

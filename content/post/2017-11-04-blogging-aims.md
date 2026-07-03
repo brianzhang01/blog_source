@@ -4,6 +4,7 @@ author: Brian Zhang
 date: '2017-11-04'
 slug: blogging-aims
 categories: []
+description: 'In this post, I briefly introduce my current ideas for this blog and say a bit about myself.'
 tags:
   - general
 ---

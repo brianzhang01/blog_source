@@ -4,6 +4,7 @@ author: Brian Zhang
 date: '2018-10-24'
 slug: missing-heritability-and-microaggressions
 categories: []
+description: 'Missing heritability is like microaggressions: many seemingly insignificant effects can add up.'
 tags:
   - general
 ---

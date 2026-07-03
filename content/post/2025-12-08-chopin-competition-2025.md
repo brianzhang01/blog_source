@@ -5,6 +5,7 @@ date: '2025-12-08'
 slug: chopin-competition-2025
 categories: []
 tags: []
+description: "I began watching the Chopin Competition's content in 2018, with their first International Chopin Competition on Period Instruments. Since then, it has become an event whenever the Competition's live content reappears in my YouTube feed. I followed this year's competition quite a bit, but for me, so much of my appreciation took off after the winners were announced. My favorites at the start were Shiori Kuwahara and David Khrikuli; now that has shifted and I can't get enough of Zitong Wang's playing."
 
 ---
 
