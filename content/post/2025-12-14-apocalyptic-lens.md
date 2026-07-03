@@ -5,11 +5,13 @@ date: '2025-12-14'
 slug: apocalyptic-lens
 categories: []
 tags: []
-description: 'The Bible speaks of a duality or opposition between God’s realm and the world. The fundamentalists take "the world" to refer to heathens, who until they enter the Christian fold, are irredeemable sinners who will be judged as such. In seeking to respect the primacy of Scripture, I set forth an interpretation of "the world" as the cosmic agents of Sin that prey upon humanity and with which humanity often becomes a partner.'
+description: 'The Bible speaks of a duality or opposition between God’s realm and the world. In seeking to respect the primacy of Scripture, I set forth an interpretation of "the world" as the cosmic agents of Sin that prey upon humanity and with which humanity often becomes a partner.'
 
 ---
 
 *Journaling has been a hugely therapeutic and constructive outlet for me over the past year. The following is an essay written mostly for myself in response to questions I've asked over the past 3 years. I'm pleased with how it turned out and am sharing if it might be of interest to others. I ask you to read it with the care you would show towards someone else's journal, and am happy to hear any feedback [via email](https://www.brianczhang.com). Thanks!*
+
+*There are heavy themes of violence (in many forms) in here. Please feel free to skim past any sections or take a break.*
 
 ***
 
@@ -31,7 +33,7 @@ Now, for the purposes of this essay, I want to focus on a particular outworking 
 
 ***
 
-*"Do not love the world nor the things in the world. If anyone loves the world, the love of the Father is not in him. For all that is in the world, the lust of the flesh and the lust of the eyes and the boastful pride of life, is not from the Father, but is from the world. The world is passing away and also its lusts; but the one who does the will of God continues to live forever." —1 John 2:15-17, NASB*
+*"Do not love the world nor the things in the world. If anyone loves the world, the love of the Father is not in him. For all that is in the world, the lust of the flesh and the lust of the eyes and the boastful pride of life, is not from the Father, but is from the world. The world is passing away and also its lusts; but the one who does the will of God continues to live forever." —1 John 2:15-17, NASB 2020*
 
 Voddie Baucham passed away in September 2025. One of his sermons making the rounds was [on this passage](https://www.youtube.com/watch?v=9jYtODX22ZY). I have not watched very much of the sermon, but based on Baucham's past anti-culture stances, I have an idea what direction he would take it. To me, Baucham represents heavily conservative, biblical evangelicalism — he seeks to be guided by the biblical text ("sola scriptura") while arriving at a theology that sets Christians apart from the outside world.
 
@@ -93,7 +95,7 @@ Earlier, I raised the question, why would a good Buddhist need to convert to Chr
 
 I don't yet feel like I have landed upon answers in terms of how to understand the language of hell in the Bible. (Perhaps the apocalyptic perspective has insights to bear — the word "hell" in our Bibles is the Greek word "Gehenna," which has a Jewish backstory.) And yet, I wish to turn back to the question of necessity. What does a need for Jesus look like in our modern situation?
 
-I started outlining this piece shortly after an encounter with someone lost in his life. I had met him just a handful of times through a Christian men's group. My friend shared with us that he had wanted to die at one point, and it was at a party, intoxicated, lying on the ground, and hopeless, that he was reminded of his past experience of God and of Christians he had met. He wanted to give God one more shot and that was how we crossed paths again. Over a few more weeks, he shared that he was continuing to struggle, both with despair and with addiction. I did not hear all the details, but he had a sexual addiction mediated through his phone. Shame and fear were stopping his words from coming out, but over the course of an hour, we got enough of a picture that we decided to put into motion an intervention to prevent him from taking his life.
+I started outlining this piece shortly after an encounter with someone lost in his life. I had met him just a handful of times through a Christian men's group. My friend shared with us that he had wanted to die at one point, and it was at a party, hopeless, that he was reminded of his past experience of God and of Christians he had met. He wanted to give God one more shot and that was how we crossed paths again. Over a few more weeks, he shared that he was continuing to struggle, both with despair and with addiction. Shame and fear were stopping his words from coming out, but over the course of an hour, we got enough of a picture that we decided to put into motion an intervention to prevent him from taking his life.
 
 When I saw him on the other side of the intervention, he looked different. Mark 5:15: "they came to Jesus and saw the man who had been demon-possessed sitting down, clothed and in his right mind, the very man who had previously had the ‘legion'; and they became frightened." He basically said God met him, showed him the true light, and he wanted to live for Him now and tell others about Him. We had taken away and kept his phone for a time. He said that upon receiving it back, he immediately felt temptation, but was fighting with his life against it. He said that one time, "I saw my phone and wanted to destroy it."
 
@@ -167,6 +169,8 @@ Sources that have shaped my thinking and influenced this piece:
 - Background of "Gehenna" (hell): BibleProject Podcast, "[How Is Anger the Same as Murder?](https://bibleproject.com/podcasts/how-anger-same-murder/)"
 - New Polity Podcast, "[Building Strong Towns after the American Decline w/ Charles Marohn](https://newpolity.com/podcasts-hub/strong-towns)"
 
+All Scripture quotations are from the NASB 2020.
+
 ***For anyone experiencing thoughts of suicide, I encourage you to open up to a trusted friend or mentor. If you're in the US, you can call 988 for support at no cost.***
 
-***Started brainstorm 2025-10-20, started writing 2025-10-26, finished writing 2025-10-29.***
+***Started brainstorm 2025-10-20, started writing 2025-10-26, finished writing 2025-10-29. Made some edits on 2025-12-14 for the public version.***
