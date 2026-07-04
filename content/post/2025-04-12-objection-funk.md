@@ -5,7 +5,8 @@ date: '2025-04-12'
 slug: objection-funk
 categories: []
 tags: []
-description: "I wrote this on 2025-01-29. My friend Alex Irpan has inspired me that it's possible to mix serious and meme content on the same blog. So I'm returning to blogging with a serious take on a stupid topic."
+description: >-
+  My friend Alex Irpan has inspired me that it's possible to mix serious and meme content on the same blog. So I'm returning to blogging with a serious take on a stupid topic.
 
 ---
 

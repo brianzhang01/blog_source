@@ -5,6 +5,7 @@ date: '2019-01-22'
 slug: subtle-observations-on-range-queries
 categories: []
 tags: []
+description: "For my current research, I've had to read Kelleher et al.'s excellent msprime paper (2016) for simulating genetic sequences under the coalescent with recombination. A small trick that is used in their algorithm is the data structure of a Fenwick tree or binary indexed tree. Since I also have a side interest in competitive programming (mainly through USACO and Project Euler), I took a bit more time to learn this data structure."
 ---
 
 
@@ -72,11 +73,11 @@ ps[k = 5] = ps[4] + 3 = 17</code></pre>
 <p>Second, consider a <code>numpy</code> array for which we want to answer range sum queries. However, this <code>numpy</code> array has some values which are <code>NaN</code>. If a <code>NaN</code> is found in a range, we want to return <code>NaN</code>, and otherwise we return the regular sum. In this case as well, suppose we want the sum of entries 3 to 5, but there is a <code>NaN</code> in position 2. Then both prefix sums will be <code>NaN</code>. There is no easy way to subtract off a <code>NaN</code>, so a prefix sum approach will not work! This may affect data analysis pipelines with missing data, since missing data values are usually represented by <code>NaN</code> in both Python and R.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <p><strong><em>UPDATE 2020-02-04: added a footnote about keeping two prefix sums for the multiplication by 0 and <code>NaN</code> examples.</em></strong></p>
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
-<li id="fn1"><p>In functional programming, this would be called a <em>bag</em> – equivalent to a <a href="https://en.wikipedia.org/wiki/Multiset">multiset</a>, because we allow duplicate entries.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>Thanks to <a href="https://github.com/bqi343/USACO/blob/master/Implementations/09%20-%20Range%20Queries%20(2)/README.md">Benjamin Qi’s GitHub</a> for pointing me to these tutorials.<a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>Benjamin Qi pointed out via email that the two examples above can still be solved with prefix sums if we simply keep two prefix sums. One prefix sum counts the number of 0’s or <code>NaN</code>’s encountered so far, and when given a range, we first use that prefix sum to check if there is a 0 or <code>NaN</code> in that range. If so, we return 0 or <code>NaN</code>, and if not, we switch to using a second prefix sum. This second prefix sum changes occurrences of 0 or <code>NaN</code> to the group identity element, in this case 1 for multiplication and 0 for sum. (I wonder if there is a fancy category theory explanation of what I just described….)<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>In functional programming, this would be called a <em>bag</em> – equivalent to a <a href="https://en.wikipedia.org/wiki/Multiset">multiset</a>, because we allow duplicate entries.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Thanks to <a href="https://github.com/bqi343/USACO/blob/master/Implementations/09%20-%20Range%20Queries%20(2)/README.md">Benjamin Qi’s GitHub</a> for pointing me to these tutorials.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Benjamin Qi pointed out via email that the two examples above can still be solved with prefix sums if we simply keep two prefix sums. One prefix sum counts the number of 0’s or <code>NaN</code>’s encountered so far, and when given a range, we first use that prefix sum to check if there is a 0 or <code>NaN</code> in that range. If so, we return 0 or <code>NaN</code>, and if not, we switch to using a second prefix sum. This second prefix sum changes occurrences of 0 or <code>NaN</code> to the group identity element, in this case 1 for multiplication and 0 for sum. (I wonder if there is a fancy category theory explanation of what I just described….)<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

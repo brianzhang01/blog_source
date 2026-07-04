@@ -5,7 +5,8 @@ date: '2025-04-12'
 slug: math-motivation
 categories: []
 tags: []
-description: 'This is a backfill note from 2019-07-28. The idea is, what are mathematical achievements that are useful for motivating the study of mathematics?'
+description: >-
+  What are mathematical achievements that are useful for motivating the study of mathematics?
 ---
 
 This is a backfill note from 2019-07-28. The idea is, what are mathematical achievements that are useful for motivating the study of mathematics?
@@ -32,7 +33,7 @@ This is a backfill note from 2019-07-28. The idea is, what are mathematical achi
 ## Solved and unimportant, but with an interesting anecdote
 - Hilbert’s 3rd Problem (Dehn Invariants, 1883-1900, first to be solved)
 - Four color theorem (1976)
-- Kepler conjecture and honeycomb conjecture (1998, 1999, Thomas Hales)
+- Kepler conjecture and honeycomb conjecture (1998, 1999, Thomas Hales). *(Update 2026-07-03: sphere packing in dimension 8 actually earned Maryna Viazovka the 2022 Fields Medal, due to connections the work has with quasimodular forms. See [the original paper](https://arxiv.org/abs/1603.04246) and coverage in [Plus](https://plus.maths.org/mv) and [Quanta](https://www.quantamagazine.org/ukrainian-mathematician-maryna-viazovska-wins-fields-medal-20220705/).)*
 
 ## Unsolved
 - Goldbach Conjecture
@@ -44,3 +45,5 @@ This is a backfill note from 2019-07-28. The idea is, what are mathematical achi
 - Ramsey numbers (R(5, 5), R(6, 6))
 - ABC Conjecture
 - Birch and Swinnerton-Dyer Conjecture
+
+***Update 2026-07-03: Added note on sphere packing in dimension 8.***

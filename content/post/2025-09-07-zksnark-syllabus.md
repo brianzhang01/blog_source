@@ -5,7 +5,8 @@ date: '2025-09-06'
 slug: zksnark-syllabus
 categories: []
 tags: []
-description: 'This is a backfill note from 2025-06-19. Perhaps the most powerful cryptographic technology to come out of the last decade is general-purpose succinct zero knowledge proofs, usually called zk-SNARKs'
+description: >-
+  "Perhaps the most powerful cryptographic technology to come out of the last decade is general-purpose succinct zero knowledge proofs, usually called zk-SNARKs" —Vitalik Buterin, 2021
 
 ---
 
