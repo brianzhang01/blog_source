@@ -18,8 +18,10 @@ So here goes with a software engineering-related post!
 ## Software Engineering Tools
 
 > Every craftsman starts his or her journey with a basic set of good-quality tools. A woodworker might need rules, gauges, a couple of saws, some good planes, fine chisels, drills and braces, mallets, and clamps. These tools will be lovingly chosen, will be built to last, will perform specific jobs with little overlap with other tools, and, perhaps most importantly, will feel right in the budding woodworker's hands....
-
-> Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be. Start with a basic set of generally applicable tools.... If you come across a situation where you feel your current tools can't cut it, make a note to look for something different or more powerful that would have helped. Let need drive your acquisitions.^[*The Pragmatic Programmer: From Journeyman to Master* by Andrew Hunt and David Thomas, preface of Chapter 3: "Basic Tools"]
+>
+> Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be. Start with a basic set of generally applicable tools.... If you come across a situation where you feel your current tools can't cut it, make a note to look for something different or more powerful that would have helped. Let need drive your acquisitions.
+>
+> — *The Pragmatic Programmer: From Journeyman to Master* by Andrew Hunt and David Thomas, preface of Chapter 3: "Basic Tools"
 
 As the above quote illustrates, good tools improve the enjoyment and efficiency of one's craft. When writing software, there are many best practices that one can integrate into a project -- like documentation, unit tests, or speed benchmarks. The rationale of software engineering tools is to automate or simplify these processes so that they can be more easily adopted.
 

@@ -13,7 +13,8 @@ description: >-
 This is a backfill note from 2025-06-19.
 
 > *Perhaps the most powerful cryptographic technology to come out of the last decade is general-purpose succinct zero knowledge proofs, usually called zk-SNARKs*
-> - [Vitalik Buterin, 2021](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
+>
+> — [Vitalik Buterin, 2021](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
 I’m starting to learn about zkSNARKs, and while there’s a lot I don’t know, I feel I have a basic map of where things fall in the landscape. So I thought I’d write it down for myself and others. This is not meant to be a self-contained primer, but rather to point to what needs to be studied.
 
