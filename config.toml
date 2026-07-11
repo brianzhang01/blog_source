@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Brian Zhang's blog"
 theme = "ezhil"
 
+# New as of 2026-07-10
+# See https://discourse.gohugo.io/t/baseurl-with-subfolder-why-is-it-not-working/50786/3
+canonifyURLs = true
+
 # Enable syntax highlighting.
 pygmentsstyle = "vs"
 pygmentscodefences = true
