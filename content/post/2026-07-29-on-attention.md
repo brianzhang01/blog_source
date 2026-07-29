@@ -13,7 +13,7 @@ A question that has the potential to change my life: what am I attending to? It'
 
 I had been reading about the neural network model called Transformers—the "T" in "ChatGPT"—and how the fundamental building block is a trainable attention mechanism, basically giving the model the ability to focus in on certain parts of its computation. The original Transformers paper, titled "[Attention is All You Need](https://en.wikipedia.org/wiki/Attention_Is_All_You_Need)" (2017), showed that simply stacking attention layers ended up outperforming more complex designs that had been proposed.
 
-The decisions of what we attend to day-by-day are going to end up shaping our lives. This post helped me connect my scientific reading of attention with what it means to live faithfully before God.
+The decisions of what we attend to day-by-day are going to end up shaping our lives. This quote helped me connect my scientific reading of attention with what it means to live faithfully before God.
 
 [Ragan Sutterfield on Birding, interviewed by Jen Pollock Michel](https://jenpollockmichel.substack.com/p/consider-the-birds)
 
