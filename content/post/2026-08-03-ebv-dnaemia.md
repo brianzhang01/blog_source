@@ -21,7 +21,7 @@ The design comes from a serendipitous fact, from the section "Rationale of EBV d
 
 I suspect this made it easier for them to get the needed data from UKB and AOU. However, they say it should be possible to extend their approach "to a broad range of viruses ... from the Polyomaviridae, Adenoviridae, Parvoviridae and Anelloviridae families", it just might require more work.
 
-My favorite figures in the paper were Fig. 1b and 1c. After they align reads to the EBV genome, they need to mask out two regions in order to get a stable estimate of circulating EBV DNA, what is called EBV DNAemia in the literature. This ends up correlating very well with serostatus.
+My favorite figures in the paper were Fig. 1b and 1c. After they align reads to the EBV genome, they need to mask out two regions in order to get a stable estimate of circulating EBV DNA, what is called EBV DNAemia in the literature. This ends up correlating very well with EBV serostatus.
 
 I thought the implications of their EBV DNAemia phenotype with other diseases were less striking than I would have expected. Possibly it is because this reflects a single time estimate.
 
@@ -30,7 +30,7 @@ I enjoyed their peptide presentation analysis though. They find that HLA alleles
 Some additional peptide presentation results:
 - One HLA allele they mention is HLA-A*03:01 leading to high levels of EBV DNAemia. This happens to be an HLA I have [worked on in depth](https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964%2825%2900317-2/fulltext), and I wonder if it ties into mechanisms of glatiramer acetate.
 - I thought [this file](https://github.com/clareaulab/ebv_biobank_gwas/blob/main/epitope-scoring/data/EBV_proteins_genename.fasta) containing EBV protein sequences was fun. (The text mentions "The amino acid sequences of all 87 unique EBV protein sequences ... of the nuccore NC_007605" but this file seems to have 94 genes, not sure why.)
-- Lastly, they point to IEDB EBV epitopes being enriched for high NetMHC scores as a verification of the "capacity for NetMHC to predict viral peptide processing and presentation across HLA alleles". I am wondering if researchers who publish peptides on IEDB routinely use NetMHC as part of their screening, confounding this result.
+- Lastly, they point to IEDB EBV epitopes being enriched for high NetMHC scores as a verification of the "capacity for NetMHC to predict viral peptide processing and presentation across HLA alleles". I wonder if researchers who publish peptides on IEDB routinely use NetMHC as part of their screening, confounding this result.
 
 [^source]: I had seen this paper earlier but took a closer look after seeing it in the [Genetics Podcast](https://sanogenetics.com/resources/genetics-podcast) list of [episodes](https://www.youtube.com/watch?v=MJozamwevZQ).
 
