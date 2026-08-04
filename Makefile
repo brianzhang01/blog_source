@@ -11,7 +11,7 @@ all: build
 build: data
 	Rscript print_packages.R > packages.txt
 	R -e "blogdown::build_site(local=TRUE, run_hugo=FALSE, build_rmd='timestamp')"
-	R -e "blogdown::hugo_build(local=FALSE)"
+	R -e "blogdown::hugo_build(local=FALSE, args=c('--config', 'config.toml,config-build.toml'))"
 
 # Builds without caching.
 # Alternatively, run `make clean` and then `make build`.

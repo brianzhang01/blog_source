@@ -5,7 +5,9 @@ theme = "ezhil"
 
 # New as of 2026-07-10
 # See https://discourse.gohugo.io/t/baseurl-with-subfolder-why-is-it-not-working/50786/3
-canonifyURLs = true
+# canonifyURLs = true
+# Now part of config-build.toml
+canonifyURLs = false
 
 # Enable syntax highlighting.
 pygmentsstyle = "vs"
